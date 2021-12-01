@@ -78,7 +78,7 @@ const MainBox = styled.div`
   
   max-width: ${ ({theme}) => theme.deviceSizes.pc };
   margin: 0 auto;
-  border: 4px double ${ ({theme}) => theme.colors.green_1 };
+  border: ${ ({theme}) => theme.border.main };
   border-top: none;
   background: ${ ({theme}) => theme.colors.gray_2 };
 
@@ -93,7 +93,7 @@ const MainBox = styled.div`
 `
 
 export const TitleBox = styled.div`
-  border-bottom: 4px double ${ ({theme})=> theme.colors.green_1 };
+  border-bottom: ${ ({theme}) => theme.border.main };
   margin: 0 12px;
 
   h1 {

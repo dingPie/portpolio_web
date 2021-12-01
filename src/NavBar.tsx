@@ -15,22 +15,22 @@ const NavBar = ({ page, setPage }:NavProps ) => {
 
         <NavBox>
 
-          <NavBtn page='profile' bottomLine={page} hover 
+          <NavBtn page='profile' nowPage={page} hover 
             onClick= {() => setPage('profile')}>
             Profile
           </NavBtn>
 
-          <NavBtn page='skill' bottomLine={page} hover 
+          <NavBtn page='skill' nowPage={page} hover 
             onClick= {() => setPage('skill')}>
             Skill
           </NavBtn>
 
-          <NavBtn page='inventory' bottomLine={page} hover 
+          <NavBtn page='inventory' nowPage={page} hover 
             onClick= {() => setPage('inventory')}>
             Inventory
           </NavBtn>
 
-          <NavBtn page='achievement' bottomLine={page} hover
+          <NavBtn page='achievement' nowPage={page} hover
             onClick= {() => setPage('achievement')}>
             Achievement
           </NavBtn>
@@ -45,7 +45,7 @@ export default NavBar;
 
 
 interface Ihover {
-  bottomLine: string;
+  nowPage: string;
   page: string;
   hover?: boolean;
 };
@@ -63,13 +63,13 @@ const NavBtn = styled.div<Ihover> `
   font-size: ${ ({theme}) => theme.fontSizes.xl };
   font-weight: 600;
   text-align: center;
-  border: 4px double ${ ({theme}) => theme.colors.green_1 };;
+  border:${ ({theme}) => theme.border.main };
   border-radius: 10px 10px 0 0;
   cursor: pointer;
   z-index: 2;
 
   /* 바텀 라인 */
-  border-bottom: ${ props => props.bottomLine === props.page && 'none' };
+  border-bottom: ${ ({nowPage, page}) => nowPage === page && 'none' };
 
   /* hoverOption */
   ${({ hover }) =>
