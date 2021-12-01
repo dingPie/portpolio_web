@@ -37,18 +37,27 @@ interface IInvenModalBox {
 };
 
 const InvenModalBox = styled.div<IInvenModalBox>`
-  /* 중앙에 뜨는걸로 하자 걍 */
-  /*  뜨면 주변 어두워지고 */
-  /* 사이즈는 두개로, 미디어쿼리 상황에따라 */
-  position: absolute;
-  z-index: 1;
-  /* width: 240px; */
-  /* height: 100%; */
+    
+  /* 중앙정렬 이벤트  */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+
+  width: 480px;
   border: ${ ({theme}) => theme.border.main };
   border-radius: ${ ({theme}) => theme.space.medium };
   background: #fff2a9;
-  top: ${ ({position}) => position[0]! + 120 }px; // 확정할당연산자를 이용해 undefined 상황 없애기
-  left: ${ ({position}) => position[1]! - 24 }px;
+
+  @media ${ ({theme}) => theme.device.tablet } {
+    width: 320px;
+  }
+
+    /* position: absolute; */
+  /* top: ${ ({position}) => position[0]! + 120 }px; // 확정할당연산자를 이용해 undefined 상황 없애기
+  left: ${ ({position}) => position[1]! - 24 }px; */
+
 `;
 
 const InventLinks = styled.div`
@@ -57,6 +66,7 @@ const InventLinks = styled.div`
 
   a {
     width: 100px;
+    margin: 0 0 12px;
     text-align: center;
     text-decoration: none;
     background: coral;

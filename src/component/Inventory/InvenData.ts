@@ -11,6 +11,18 @@ export const invenData = [
     explan: '카톡 나에게보내기를 모티브로 한 메모앱웹입니다.',
     git: 'https://github.com/dingPie/hash_memo',
     distribute: 'https://cocky-chandrasekhar-c007e0.netlify.app/'
-  }
-
+  },
+  {
+    name: '언택트 관광지 소개앱',
+    img: '/logo192.png',
+    explan: `한국관광공사에서 발표한 언택트 관광지를 카카오맵과 리스트형태로 볼 수 있는 웹앱입니다.`,
+    git: 'https://github.com/dingPie/untact',
+    distribute: 'https://untacttuorspot.herokuapp.com/'
+  },
+  {
+    name: 'Type-Todo',
+    img: '/logo192.png',
+    explan: `CRUD의 기본인 Todo앱을 React, TypeScript, Rest ARI를 활용하여 제작했습니다`,
+    git: 'https://github.com/dingPie/Type-React',
+  },
 ]

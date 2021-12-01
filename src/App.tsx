@@ -3,7 +3,7 @@ import styled, {createGlobalStyle, ThemeProvider} from 'styled-components';
 import Inventory from './component/Inventory/Inventory';
 import Profile from './component/Profile/Profile';
 import Skill from './component/Skill/Skill';
-import Achievement from './component/Title/Achievement';
+import Achievement from './component/Achievement/Achievement';
 import NavBar from './NavBar';
 import theme from './styles/theme';
 
@@ -20,6 +20,7 @@ function App() {
               <span> / 인적사항 </span>
             </TitleBox>
             )
+
       case 'skill':
         return (
           <TitleBox>
@@ -27,6 +28,7 @@ function App() {
             <span> / 기술 & 역량 </span>
           </TitleBox>
           )
+
       case 'inventory':
       return (
         <TitleBox>
@@ -34,6 +36,7 @@ function App() {
           <span> / 포트폴리오 항목 </span>
         </TitleBox>
         )
+        
       case 'achievement':
         return (
           <TitleBox>
@@ -95,6 +98,7 @@ const MainBox = styled.div`
 export const TitleBox = styled.div`
   border-bottom: ${ ({theme}) => theme.border.main };
   margin: 0 12px;
+  padding: 8px 0 0;
 
   h1 {
     display: inline-block;

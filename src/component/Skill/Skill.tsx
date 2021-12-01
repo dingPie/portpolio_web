@@ -1,32 +1,27 @@
 import React from "react";
 import styled from "styled-components";
 import TitleBox from "../Profile/Profile";
+import { SkillData } from "./SkillData";
 
 const Skill = () => {
 
+  const skillList = () => {
+    return SkillData.map( v => 
+      <SkillList>
+        <img src={v.img} alt="" />
+        <SkillInfo>
+          <SName> {v.name} </SName>/ <SLv> Lv. {v.lv} </SLv>
+          <SExplain> {v.explan} </SExplain>
+        </SkillInfo>
+      </SkillList>
+      )
+  }
 
   return (
     <SkillBox>
+
+      {skillList()}
       
-      <SkillList>
-
-        <img src="/logo192.png" alt="" />
-        <SkillInfo>
-          <span> React.js </span> / <span> Lv. low 5 </span>
-          <SkillExplain> useState/Effect 등 CRUD 가능 </SkillExplain>
-        </SkillInfo>
-
-      </SkillList>
-
-      <SkillList>
-
-        <img src="/logo192.png" alt="" />
-        <SkillInfo>
-          <span> HTML5 </span> / <span> Lv. low 6 </span>
-          <SkillExplain> 초급 어느정도 레벨입니다 </SkillExplain>
-        </SkillInfo>
-        
-      </SkillList>
 
     </SkillBox>
   )
@@ -50,9 +45,9 @@ const SkillBox = styled.div`
 const SkillList = styled.div`
 
   display: flex;
-  height: 72px;
+  height: 88px;
   margin: 12px 0 0;
-  background: #e8e8f8;
+  background: #ffffff;
   border-radius: ${ ({theme}) => theme.space.base }; //8px;
 
   img {
@@ -63,6 +58,7 @@ const SkillList = styled.div`
 `
 const SkillInfo = styled.div`
   width: 100%;
+  padding: 8px;
   border-radius: 0 8px 8px 0;
   border: ${ ({ theme }) => theme.border.main };
   border-left: none;
@@ -72,7 +68,15 @@ const SkillInfo = styled.div`
     margin: ${ ({theme}) => theme.space.small };
   }
 `
+const SName = styled.div`
+  display: inline-block;
+  margin: ${ ({theme}) => theme.space.small };
+`
+const SLv = styled.div`
+  display: inline-block;
+  margin: ${ ({theme}) => theme.space.small };
+`
 
-const SkillExplain = styled.div`
+const SExplain = styled.div`
   margin: ${ ({theme}) => theme.space.small };
 `

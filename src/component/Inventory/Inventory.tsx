@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { invenData } from "./InvenData";
 import InvenModal from "./InvenModal";
 
+
 interface IInvenData {
   name: string;
   img: string;
@@ -19,12 +20,12 @@ export const defalutData = {
 
 
 const Inventory = () => {
-  const [Data, setData] = useState<IInvenData[]>(invenData)
+  // const [Data, setData] = useState<IInvenData[]>(invenData)
   const [clickData, setClickData] = useState<HTMLElement | null>(null)
   const [onInvenModal, setOnInvenModal] = useState(false)
 
   const invenItems = () => {
-    return Data.map( (v:IInvenData) => 
+    return invenData.map( (v:IInvenData) => 
       <InvenItems id={v.name} >
         <img src={v.img} id={v.name} alt={v.name}
         onClick={ (e) => onclickHendler(e) }
@@ -35,25 +36,17 @@ const Inventory = () => {
 
   const onclickHendler = (e: React.MouseEvent<HTMLImageElement>) => {
     const eTarget = e.target as HTMLElement;
-    let targetData = Data.filter( v => v.name === eTarget.id )[0]
     setClickData(eTarget)
     setOnInvenModal(!onInvenModal)
-    // console.log(eTarget.offsetLeft)
-    console.log(eTarget.offsetTop)
   }
-
-  useEffect(() => {
-    console.log(clickData)
-  }, [clickData])
 
   return (
     <IneventoryBox>
 
       { onInvenModal && <InvenModal clickData={clickData} /> }
+      { onInvenModal && <ModalBackgroundBox onClick= { () => setOnInvenModal(false)} ></ModalBackgroundBox> }
 
       {invenItems()}
-      {invenItems()}  {invenItems()}  {invenItems()}  {invenItems()}  {invenItems()} {invenItems()} {invenItems()}  {invenItems()}
-      {invenItems()}  {invenItems()}
 
     </IneventoryBox>
   )
@@ -63,6 +56,7 @@ export default Inventory;
 
 
 const IneventoryBox = styled.div`
+  position: relative;
   display: grid;
   grid-template-columns: repeat(5, 1fr) ;
   column-gap: 24px;
@@ -72,20 +66,26 @@ const IneventoryBox = styled.div`
   
   @media ${ ({theme}) => theme.device.tablet } {
     grid-template-columns: repeat(3, 1fr) ;
-    column-gap: 24px;
+    column-gap: 12px;
     /* row-gap: 24px; */
   }
 
 `
 const InvenItems = styled.div`
-  width: 100%;
-  height: 90%;
-  max-width: 140px;
-  max-height: 140px;
+  width: 95%;
+  height: 85%;
+  max-width: 132px;
+  max-height: 132px;
   margin: 12px auto 0;
+  border: ${ ({theme}) => theme.border.main };
   border-radius: ${ ({theme}) => theme.space.lg };
-  background: #e5f3d4;
+  background: #d4e8f3;
   cursor: pointer;
+
+  &:hover {
+    transition-duration: 0.3s;
+    transform: scale(1.1);
+  }
 
   img {
     width: 100%;
@@ -94,4 +94,15 @@ const InvenItems = styled.div`
     max-width: 140px;
     max-height: 140px;
   }
+`
+
+const ModalBackgroundBox = styled.div`
+  position: absolute;
+  left: 0px;
+  top: -77px;
+  width: 100%;
+  max-width: 1024px;
+  height: 100vh;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.3);
 `

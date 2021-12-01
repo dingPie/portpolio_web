@@ -60,7 +60,7 @@ const NavBox = styled.div`
 const NavBtn = styled.div<Ihover> `
   width: 100%;
   padding: ${ ({theme}) => theme.space.small };
-  font-size: ${ ({theme}) => theme.fontSizes.xl };
+  /* font-size: ${ ({theme}) => theme.fontSizes.xl }; */
   font-weight: 600;
   text-align: center;
   border:${ ({theme}) => theme.border.main };

@@ -12,12 +12,12 @@ const colors = {
 };
 
 const fontSizes = {
-  small: calcRem(14),
-  base: calcRem(16),
+  small: calcRem(12),
+  base: calcRem(14),
+  medium: calcRem(16),
   lg: calcRem(18),
-  xl: calcRem(20),
-  xxl: calcRem(22),
-  xxxl: calcRem(24),
+  xl: calcRem(22),
+  xxl: calcRem(26),
   titleSize: calcRem(50),
 };
 
