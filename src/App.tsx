@@ -78,15 +78,14 @@ const GrobalStyle= createGlobalStyle`
 `
 
 const MainBox = styled.div`
-  
   max-width: ${ ({theme}) => theme.deviceSizes.pc };
   margin: 0 auto;
   border: ${ ({theme}) => theme.border.main };
   border-top: none;
-  background: ${ ({theme}) => theme.colors.gray_2 };
+  /* background: ${ ({theme}) => theme.colors.gray_2 }; */
 
-
-  @media ${ ({theme}) => theme.device.tablet } {
+  // 모바일사이즈 (pc 이하일때)
+  @media ${ ({theme}) => theme.device.pc } {
     max-width:  ${ ({theme}) => theme.deviceSizes.mobileL };
     background: #e2fbff;
   }

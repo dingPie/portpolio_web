@@ -27,5 +27,9 @@ const ProfileBox = styled.div`
   }
 `
 
-
+export const SubTitle = styled.h2`
+  margin: 12px 16px;
+  padding: 4px 0 ;
+  border-bottom: ${ ({theme}) => theme.border.main }
+`
 

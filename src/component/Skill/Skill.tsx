@@ -35,7 +35,7 @@ const SkillBox = styled.div`
   column-gap: 12px;
   padding: 0 12px;
 
-  @media ${ ({theme}) => theme.device.tablet } {
+  @media ${ ({theme}) => theme.device.pc } {
     grid-template-columns: 1fr;
     column-gap: 24px;
   }

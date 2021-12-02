@@ -58,11 +58,14 @@ export default Inventory;
 const IneventoryBox = styled.div`
   position: relative;
   display: grid;
-  grid-template-columns: repeat(5, 1fr) ;
+  grid-template-columns: repeat(6, 1fr) ;
   column-gap: 24px;
   row-gap: 12px;
+  align-content: start;
+
   padding: 0 12px 24px;
   margin: 12px 0;
+  min-height: 86vh;
   
   @media ${ ({theme}) => theme.device.pc } {
     grid-template-columns: repeat(3, 1fr) ;
@@ -73,10 +76,10 @@ const IneventoryBox = styled.div`
 `
 const InvenItems = styled.div`
   width: 95%;
-  height: 85%;
   max-width: 132px;
   max-height: 132px;
   margin: 12px auto 0;
+
   border: ${ ({theme}) => theme.border.main };
   border-radius: ${ ({theme}) => theme.space.lg };
   background: #d4e8f3;
@@ -89,8 +92,8 @@ const InvenItems = styled.div`
 
   img {
     width: 100%;
-    height: 90%;
-    padding-top: 4%;
+    height: 100%;
+    border-radius: 8px;
     max-width: 140px;
     max-height: 140px;
   }
@@ -102,7 +105,8 @@ const ModalBackgroundBox = styled.div`
   top: -77px;
   width: 100%;
   max-width: 1024px;
-  height: 100vh;
+  height: 95vh;
+
   z-index: 1;
   background: rgba(0, 0, 0, 0.3);
 `

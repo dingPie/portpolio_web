@@ -1,15 +1,15 @@
 import React, { useState, useEffect, useRef,  } from "react";
 import styled, { keyframes, css } from "styled-components";
+import { SubTitle } from './Profile'
 import { InfoData } from "./InfoData";
 
 const PicAndInfo = () => {
-  const [photos, setPhotos] = useState(InfoData.photo.ident)
-  const timeRef = useRef<any> (null)
+  const [photos, setPhotos] = useState('ident')
+  const timeRef = useRef<any>(null)
 
   // useEffect(() => { 
-  //   const photo = InfoData.photo;
   //     timeRef.current = setInterval(() => {
-  //       photos === photo.full ? setPhotos(photo.ident) : setPhotos(photo.full)
+  //       photos === 'ident' ? setPhotos('full') : setPhotos('ident')
   //     }, 5000)
 
   //     return () => {
@@ -17,21 +17,65 @@ const PicAndInfo = () => {
   //     }
   // }, [photos])
 
+
   return (
     <PicAndInfoBox>
 
       <PicBox>
+      <SubTitle> Profile Ficture </SubTitle>
+
         <ButtonBox >
-          <button onClick={ () => setPhotos(InfoData.photo.ident)} > 1 </button>
-          <button onClick={ () => setPhotos(InfoData.photo.full)} > 2 </button>
+          <button onClick={ () => setPhotos('ident')} > 1 </button>
+          <button onClick={ () => setPhotos('full')} > 2 </button>
         </ButtonBox>
-        <Picture active>
-          <img src= {photos} alt="" />
+
+        <Picture animation>
+         {/* 이렇게 했을때, 쉽게 Animation을 넣을 수 있다. */}
+         { photos === 'ident' ? <img src= {InfoData.photo.ident} alt="" /> : null}
+         { photos === 'full' ? <img src= {InfoData.photo.full} alt="" /> : null}
         </Picture>
       </PicBox>
       
       <InfoBox> 
-        인적사항
+
+        <SubTitle> Infomation </SubTitle>
+        
+        <InfoCate>
+          <InTheme> Name.</InTheme>
+          <InContent> {InfoData.name} </InContent> 
+        </InfoCate>
+
+        <InfoCate>
+          <InTheme> Birth.</InTheme>
+          <InContent> {InfoData.birth} </InContent> 
+        </InfoCate>
+
+        <InfoCate>
+          <InTheme> Phone. </InTheme>
+          <InContent> {InfoData.phoneNum} </InContent> 
+        </InfoCate>
+
+        <InfoCate>
+          <InTheme> E-Mail. </InTheme>
+          <InContent> {InfoData.email} </InContent> 
+        </InfoCate>
+
+        <InfoCate>
+          <InTheme> Address. </InTheme>
+          <InContent> {InfoData.address} </InContent> 
+        </InfoCate>
+
+        <InfoCate>
+          <InTheme> Edu Background. </InTheme>
+          <InContent> {InfoData.highSchool.name}, {InfoData.highSchool.date}, {InfoData.highSchool.major}, {InfoData.highSchool.state} </InContent> 
+          <InContent> {InfoData.univ.name}, {InfoData.univ.date}, {InfoData.univ.major}, {InfoData.univ.state} </InContent> 
+        </InfoCate>
+
+        <InfoCate>
+          <InTheme> Military Serv. </InTheme>
+          <InContent> {InfoData.army.date} {InfoData.army.state} </InContent> 
+        </InfoCate>
+
       </InfoBox>
 
     </PicAndInfoBox>
@@ -46,21 +90,21 @@ const PicAndInfoBox = styled.div`
   column-gap: 12px;
   padding: 0 12px;
 
-  /* 768px 이하일때 */
+  /* 모바일 화면 */
   @media ${ ({theme}) => theme.device.pc } {
     column-gap: 24px;
   }
 `
 interface IPicBox {
-  active?: boolean;
+  animation?: boolean;
 }
 
 // 사진
 const PicBox = styled.div`
   position:relative;
   max-width: ${ ({theme}) => theme.deviceSizes.mobileL };
-  width: 80%;
-  height: 320px;
+  width: 100%;
+  
   margin: 12px auto;
   border: ${ ({theme}) => theme.border.main };
   border-radius: 4px;
@@ -75,24 +119,20 @@ const Picture = styled.div<IPicBox>`
   img {
     height: 90%;
     margin: 12px 0;
-  }
-/* 
-    /* ${(props) => props.active && css`
+
+    ${ ({animation}) => animation && css`
     animation-name: ${boxFade};
-    animation-duration: 1s;
-    animation-delay: 4s;
+    animation-duration: 0.7s;
     animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite; */
     /* animation: name duration timing-function delay iteration-count direction fill-mode; */
-  `} */
+  `}
+  }
 `
 
 const boxFade = keyframes`
   0% {
-    opacity: 1;
-  }
-  50% {
     opacity: 0;
+    transform: scale(1.4);
   }
   100% {
     opacity: 1;
@@ -103,8 +143,8 @@ const ButtonBox = styled.div`
   display: flex;
   flex-direction: column;
   position: absolute;
-  right: 2%;
-  top: 3%;
+  right: 4%;
+  top: 20%;
 
   button {
     margin: 2px;
@@ -122,7 +162,19 @@ const ButtonBox = styled.div`
 const InfoBox = styled.div`
   max-width: ${ ({theme}) => theme.deviceSizes.mobileL };
   width: 100%;
-  height: 360px;
+  /* height: 360px; */
   margin: 12px auto;
-  background: #a8ccdd;
+  /* padding: 12px 16px; */
+  border: ${ ({theme}) => theme.border.main };
+  border-radius: 8px;
+`
+const InfoCate = styled.div`
+  margin: 12px 16px;
+`
+const InTheme = styled.div`
+  margin: 4px 0;
+  font-weight: 600;
+  border-bottom: ${ ({theme}) => theme.border.bottom };
+`
+const InContent = styled.div`
 `

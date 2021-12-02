@@ -58,7 +58,8 @@ const device = {
 };
 
 const border = {
-  main: `4px double ${colors.green_1}`
+  main: `4px double ${colors.green_1}`,
+  bottom: `2px solid ${colors.green_1}`
 }
 
 const theme: DefaultTheme = {
