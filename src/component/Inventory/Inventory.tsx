@@ -64,7 +64,7 @@ const IneventoryBox = styled.div`
   padding: 0 12px 24px;
   margin: 12px 0;
   
-  @media ${ ({theme}) => theme.device.tablet } {
+  @media ${ ({theme}) => theme.device.pc } {
     grid-template-columns: repeat(3, 1fr) ;
     column-gap: 12px;
     /* row-gap: 24px; */

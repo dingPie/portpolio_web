@@ -50,7 +50,7 @@ const InvenModalBox = styled.div<IInvenModalBox>`
   border-radius: ${ ({theme}) => theme.space.medium };
   background: #fff2a9;
 
-  @media ${ ({theme}) => theme.device.tablet } {
+  @media ${ ({theme}) => theme.device.pc } {
     width: 320px;
   }
 

@@ -72,8 +72,8 @@ export default App;
 
 
 const GrobalStyle= createGlobalStyle`
-  body {
-    
+  * {
+    box-sizing: border-box;
   }
 `
 
@@ -87,11 +87,8 @@ const MainBox = styled.div`
 
 
   @media ${ ({theme}) => theme.device.tablet } {
-    background: #bee8ee;
-    /* 미디어쿼리. 하나일떄 */
-    
-    /* 프로필 페이지에선 두개씩 묶은 미디어를 row에서 colomn으로 바꿔주는 식으로, */
-    /* 그 외에 페이지에선 grid를 2에서 1로 바꿔주는 식으로 */
+    max-width:  ${ ({theme}) => theme.deviceSizes.mobileL };
+    background: #e2fbff;
   }
 `
 

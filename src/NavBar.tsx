@@ -55,6 +55,11 @@ const NavBox = styled.div`
   width: 100%;
   max-width: ${ ({theme}) => theme.deviceSizes.pc };
   margin: 0 auto;
+
+  @media ${ ({theme}) => theme.device.pc } {
+    max-width:  ${ ({theme}) => theme.deviceSizes.mobileL };
+    /* background: #bee8ee; */
+  }
 `
 
 const NavBtn = styled.div<Ihover> `

@@ -33,7 +33,7 @@ const StatusBox = styled.div`
   column-gap: 12px;
   padding: 0 12px;
   
-  @media ${ ({theme}) => theme.device.tablet } {
+  @media ${ ({theme}) => theme.device.pc } {
     column-gap: 24px;
   }
 `

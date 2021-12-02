@@ -21,7 +21,7 @@ const ProfileBox = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
 
-  @media ${ ({theme}) => theme.device.tablet } {
+  @media ${ ({theme}) => theme.device.pc } {
     column-gap: 24px;
     grid-template-columns: 1fr;
   }
