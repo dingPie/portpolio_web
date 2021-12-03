@@ -65,7 +65,7 @@ const IneventoryBox = styled.div`
 
   padding: 0 12px 24px;
   margin: 12px 0;
-  min-height: 86vh;
+  
   
   @media ${ ({theme}) => theme.device.pc } {
     grid-template-columns: repeat(3, 1fr) ;
@@ -105,7 +105,7 @@ const ModalBackgroundBox = styled.div`
   top: -77px;
   width: 100%;
   max-width: 1024px;
-  height: 95vh;
+  height: 89.5vh;
 
   z-index: 1;
   background: rgba(0, 0, 0, 0.3);

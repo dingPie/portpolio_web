@@ -79,10 +79,11 @@ const GrobalStyle= createGlobalStyle`
 
 const MainBox = styled.div`
   max-width: ${ ({theme}) => theme.deviceSizes.pc };
+  min-height: 90vh;
   margin: 0 auto;
+  padding: 0 0 24px;
   border: ${ ({theme}) => theme.border.main };
   border-top: none;
-  /* background: ${ ({theme}) => theme.colors.gray_2 }; */
 
   // 모바일사이즈 (pc 이하일때)
   @media ${ ({theme}) => theme.device.pc } {

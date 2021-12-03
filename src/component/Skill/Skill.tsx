@@ -50,6 +50,7 @@ const SkillList = styled.div`
   border-radius: ${ ({theme}) => theme.space.base }; //8px;
 
   img {
+    width: 88px;
     margin: ${ ({theme}) => theme.space.medium } ; // 6, 16px
     padding: 0 ${ ({theme}) => theme.space.medium };
     border-right: 1px solid  ${ ({ theme }) => theme.colors.green_1 };
@@ -57,7 +58,7 @@ const SkillList = styled.div`
 `
 const SkillInfo = styled.div`
   width: 100%;
-  padding: 8px;
+  /* padding: 8px; */
   border-radius: 0 8px 8px 0;
   border: ${ ({ theme }) => theme.border.main };
   border-left: none;
@@ -69,13 +70,14 @@ const SkillInfo = styled.div`
 `
 const SName = styled.div`
   display: inline-block;
-  margin: ${ ({theme}) => theme.space.small };
+  /* margin: ${ ({theme}) => theme.space.small }; */
+  margin: 8px 8px 4px;
 `
 const SLv = styled.div`
   display: inline-block;
-  margin: ${ ({theme}) => theme.space.small };
 `
 
 const SExplain = styled.div`
+  font-size: ${ ({theme}) => theme.fontSizes.base }; 
   margin: ${ ({theme}) => theme.space.small };
 `

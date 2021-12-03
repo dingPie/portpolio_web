@@ -47,7 +47,7 @@ const AchieveBox = styled.div`
 const AchieveList = styled.div`
 
   display: flex;
-  height: 88px;
+  height: 96px;
   margin: 12px 0 0;
   background: #ffffff;
   border-radius: ${ ({theme}) => theme.space.base }; //8px;
@@ -65,15 +65,14 @@ const AchieveInfo = styled.div`
   border: ${ ({ theme }) => theme.border.main };
   border-left: none;
 
-
 `
 const ATitle = styled.div`
   font-size: ${ ({theme}) => theme.fontSizes.lg };
-  margin: 6px 6px 4px;
+  margin: 6px 6px 2px;
 `
 const ADate = styled.div`
   font-size: ${ ({theme}) => theme.fontSizes.small };
-  margin: 0 6px 4px;
+  margin: 0 6px 8px;
 `
 const AAchieve = styled.div`
   margin: 0 6px 4px;
