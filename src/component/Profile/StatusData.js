@@ -21,21 +21,31 @@ export const options = {
       r: {
         min: 0,
         max: 10,
+
+        pointLabels: {
+          font: {
+            family: "Neo둥근모Code",
+            // size: 30,
+          }
+        },
+
         ticks: {
           stepSize: 2,
           maxTicksLimit: 10,
           font: {
-            size: 16 
+            size: 16,
+            family: "Neo둥근모Code"
         }
         },
-    },
 
+    },
   },
   plugins: {
     legend: {
         labels: {
             font: {
                size: 0,
+               family: "Neo둥근모Code"
             }
         }
     }
@@ -43,7 +53,7 @@ export const options = {
 };
 
 export const explData = [
-  { label: '체력', expl: '생활에 지장이 없습니다. 스포츠는 잘 못합니다.' },
+  { label: '체력', expl: '쉽게 지치지 않습니다. 스포츠는 잘 못합니다.' },
   { label: '실행력', expl: '목표가 있다면 즉시 실행에 옮깁니다. 단, 돈이 드는건 조금 망설입니다' },
   { label: '창의력', expl: '한가지 일을 다양한 시야로 해석할 수 있습니다' },
   { label: '사고력', expl: '논리적, 인문학적인 사고가 두루 발달되어 있습니다' },

@@ -14,13 +14,13 @@ export const AchieveData = [
   {
     title: '믿음직한 영업사원',
     date: '2020-08 ~ 2021-04',
-    achieve: ' Coupang Eats Sales 근무',
+    achieve: ' Coupang Eats Sales 근무, 실적대비 낮은 캔슬율',
     img: "/logo192.png"
   },
   {
-    title: '막내 조율자',
+    title: '시스템 메이커',
     date: '2019-05 ~ 2020-05',
-    achieve: '돈카츠윤석 홀 / 주방 겸임근무',
+    achieve: '돈카츠윤석 홀 / 주방 겸임근무, 업무 간 시스템 정립',
     img: "/logo192.png"
   },
 ]

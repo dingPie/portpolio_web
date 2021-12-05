@@ -84,7 +84,7 @@ const ExplBox = styled.div`
 `
 
 const ExplCate = styled.div`
-  margin: 12px 16px;
+  margin: 16px;
 `
 const ExTheme = styled.div`
   margin: 4px 0;

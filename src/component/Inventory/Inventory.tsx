@@ -82,7 +82,6 @@ const InvenItems = styled.div`
 
   border: ${ ({theme}) => theme.border.main };
   border-radius: ${ ({theme}) => theme.space.lg };
-  background: #d4e8f3;
   cursor: pointer;
 
   &:hover {
@@ -93,9 +92,9 @@ const InvenItems = styled.div`
   img {
     width: 100%;
     height: 100%;
-    border-radius: 8px;
     max-width: 140px;
     max-height: 140px;
+    border-radius: 8px;
   }
 `
 

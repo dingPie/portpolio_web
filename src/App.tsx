@@ -74,6 +74,7 @@ export default App;
 const GrobalStyle= createGlobalStyle`
   * {
     box-sizing: border-box;
+    font-family: "Neo둥근모Code"
   }
 `
 
@@ -88,7 +89,6 @@ const MainBox = styled.div`
   // 모바일사이즈 (pc 이하일때)
   @media ${ ({theme}) => theme.device.pc } {
     max-width:  ${ ({theme}) => theme.deviceSizes.mobileL };
-    background: #e2fbff;
   }
 `
 
