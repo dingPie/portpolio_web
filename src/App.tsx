@@ -11,6 +11,11 @@ import theme from './styles/theme';
 function App() {
   const [page, setPage] = useState('profile')
 
+  // 그래프의 처치가 어려워서 일단 패스...ㅠ
+  // const LocalTheme = window.localStorage.getItem('theme') || 'light';
+  // const [themeMode, setThemeMode] = useState(LocalTheme);
+
+
   const setTitle = () => {
     switch (page) {
       case 'profile':
@@ -74,11 +79,14 @@ export default App;
 const GrobalStyle= createGlobalStyle`
   * {
     box-sizing: border-box;
-    font-family: "Neo둥근모Code"
+    font-family: "Neo둥근모Code";
   }
 `
+interface IMainBox {
+  themeMode?: string;
+}
 
-const MainBox = styled.div`
+const MainBox = styled.div<IMainBox>`
   max-width: ${ ({theme}) => theme.deviceSizes.pc };
   min-height: 90vh;
   margin: 0 auto;
@@ -88,11 +96,12 @@ const MainBox = styled.div`
 
   // 모바일사이즈 (pc 이하일때)
   @media ${ ({theme}) => theme.device.pc } {
-    max-width:  ${ ({theme}) => theme.deviceSizes.mobileL };
+    max-width: ${ ({theme}) => theme.deviceSizes.mobileL };
   }
 `
 
 export const TitleBox = styled.div`
+  position: relative;
   border-bottom: ${ ({theme}) => theme.border.main };
   margin: 0 12px;
   padding: 8px 0 0;
@@ -105,4 +114,10 @@ export const TitleBox = styled.div`
     font-weight: 600;
     font-size: ${ ({ theme }) => theme.fontSizes.small }
   }
+`
+
+const ViewModeBtn = styled.span`
+  position: absolute;
+  top: 50%;
+  right: 5%;
 `

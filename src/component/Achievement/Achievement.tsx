@@ -53,6 +53,7 @@ const AchieveList = styled.div`
   border-radius: ${ ({theme}) => theme.space.base }; //8px;
 
   img {
+    width: 88px;
     margin: ${ ({theme}) => theme.space.medium } ; // 6, 16px
     padding: 0 ${ ({theme}) => theme.space.medium };
     border-right: 1px solid  ${ ({ theme }) => theme.colors.green_1 };

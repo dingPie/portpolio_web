@@ -4,18 +4,29 @@ import { SubTitle } from './Profile'
 import { InfoData } from "./InfoData";
 
 const PicAndInfo = () => {
-  const [photos, setPhotos] = useState('ident')
+  const [photos, setPhotos] = useState('charactor')
   const timeRef = useRef<any>(null)
 
-  // useEffect(() => { 
-  //     timeRef.current = setInterval(() => {
-  //       photos === 'ident' ? setPhotos('full') : setPhotos('ident')
-  //     }, 5000)
+  useEffect(() => { 
+      timeRef.current = setInterval(() => {
+        // photos === 'ident' ? setPhotos('full'): setPhotos('ident')
+        switch (photos) {
+          case 'charactor':
+            setPhotos('ident')
+            return
+          case 'ident':
+            setPhotos('full')
+            return
+          case 'full':
+            setPhotos('charactor')
+            return
+        }
+      }, 5000)
 
-  //     return () => {
-  //       clearInterval(timeRef.current) // 위에 setInterval이 실행되고 삭제해줘야 중복 실행이 안된다.
-  //     }
-  // }, [photos])
+      return () => {
+        clearInterval(timeRef.current) // 위에 setInterval이 실행되고 삭제해줘야 중복 실행이 안된다.
+      }
+  }, [photos])
 
 
   return (
@@ -25,15 +36,24 @@ const PicAndInfo = () => {
       <SubTitle> Profile Ficture </SubTitle>
 
         <ButtonBox >
-          <button onClick={ () => setPhotos('ident')} > 1 </button>
-          <button onClick={ () => setPhotos('full')} > 2 </button>
+          <button onClick={ () => setPhotos('charactor')} > 1 </button>
+          <button onClick={ () => setPhotos('ident')} > 2 </button>
+          <button onClick={ () => setPhotos('full')} > 3 </button>
         </ButtonBox>
 
         <Picture animation>
          {/* 이렇게 했을때, 쉽게 Animation을 넣을 수 있다. */}
+
+         { photos === 'charactor' ? <img src= {InfoData.photo.charactor} alt="" /> : null}
          { photos === 'ident' ? <img src= {InfoData.photo.ident} alt="" /> : null}
          { photos === 'full' ? <img src= {InfoData.photo.full} alt="" /> : null}
+
+
+
         </Picture>
+          { photos === 'charactor' ? <p> {InfoData.comment.charactor} </p> : null}
+          { photos === 'ident' ? <p> {InfoData.comment.ident} </p> : null}
+          { photos === 'full' ? <p> {InfoData.comment.full} </p> : null}
       </PicBox>
       
       <InfoBox> 
@@ -109,6 +129,11 @@ const PicBox = styled.div`
   border: ${ ({theme}) => theme.border.main };
   border-radius: 4px;
 
+  p {
+    margin: 4px auto 12px;
+    text-align: center;
+  }
+
 `
 const Picture = styled.div<IPicBox>`
   width: 80%;
@@ -122,7 +147,7 @@ const Picture = styled.div<IPicBox>`
 
     ${ ({animation}) => animation && css`
     animation-name: ${boxFade};
-    animation-duration: 0.7s;
+    animation-duration: 1s;
     animation-timing-function: ease-in-out;
     /* animation: name duration timing-function delay iteration-count direction fill-mode; */
   `}
@@ -132,7 +157,7 @@ const Picture = styled.div<IPicBox>`
 const boxFade = keyframes`
   0% {
     opacity: 0;
-    transform: scale(1.4);
+    /* transform: scale(1.2); */
   }
   100% {
     opacity: 1;

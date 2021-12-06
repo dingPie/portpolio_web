@@ -25,6 +25,7 @@ export const options = {
         pointLabels: {
           font: {
             family: "Neo둥근모Code",
+            color: 'white'
             // size: 30,
           }
         },
@@ -34,7 +35,7 @@ export const options = {
           maxTicksLimit: 10,
           font: {
             size: 16,
-            family: "Neo둥근모Code"
+            family: "Neo둥근모Code",
         }
         },
 
@@ -45,7 +46,7 @@ export const options = {
         labels: {
             font: {
                size: 0,
-               family: "Neo둥근모Code"
+               family: "Neo둥근모Code",
             }
         }
     }

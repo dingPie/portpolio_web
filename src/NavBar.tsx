@@ -45,8 +45,8 @@ export default NavBar;
 
 
 interface Ihover {
-  nowPage: string;
   page: string;
+  nowPage: string;
   hover?: boolean;
 };
 
