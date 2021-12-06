@@ -2,7 +2,7 @@ export const InfoData =
   {
     name: '박찬하',
     photo: { charactor:'/img/profile/charactor_img.jpg', ident:'/img/profile/photo_ident.png', full:'/img/profile/photo_full.jpg', },
-    comment: { charactor: '테스트 ',ident: '사람 친화적인 개발자', full: '아직은 뉴비'},
+    comment: { charactor: '테스트 ', ident: '사람 친화적인 개발자', full: '아직은 뉴비'},
     birth: '1996-12-16',
     phoneNum: '010-2463-0369',
     email: 'chanbyul5@naver.com',

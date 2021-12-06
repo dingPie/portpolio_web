@@ -48,12 +48,12 @@ const PicAndInfo = () => {
          { photos === 'ident' ? <img src= {InfoData.photo.ident} alt="" /> : null}
          { photos === 'full' ? <img src= {InfoData.photo.full} alt="" /> : null}
 
-
-
         </Picture>
-          { photos === 'charactor' ? <p> {InfoData.comment.charactor} </p> : null}
+
+          {/* { photos === 'charactor' ? <p> {InfoData.comment.charactor} </p> : null}
           { photos === 'ident' ? <p> {InfoData.comment.ident} </p> : null}
-          { photos === 'full' ? <p> {InfoData.comment.full} </p> : null}
+          { photos === 'full' ? <p> {InfoData.comment.full} </p> : null} */}
+
       </PicBox>
       
       <InfoBox> 

@@ -1,46 +1,58 @@
-# Getting Started with Create React App
+# Portpolio Web
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### 레트로 게임 스타일의 포트폴리오 웹입니다.
 
-## Available Scripts
+<br>
 
-In the project directory, you can run:
+## 사용된 기술 및 라이브러리
 
-### `npm start`
+<img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black">
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=TypeScript&logoColor=black">
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<img src="https://img.shields.io/badge/styled Components-DB7093?style=for-the-badge&logo=styled-components&logoColor=black">
 
-### `npm test`
+<img src="https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&logo=Chart.js&logoColor=black">
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<br>
+<br>
 
-### `npm run build`
+## 페이지 소개
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br><br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+|포트폴리오 화면|
+|---|
+|이미지|
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+프로필 페이지입니다. <br>
+기본적인 정보와 개인의 특성을 Chart.js 를 활용하여 게임의 능력치처럼 수치화하여 보여줍니다.
 
-### `npm run eject`
+<br><br>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+|스킬 (기술 & 역량) 화면|
+|---|
+|이미지|
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+스킬 페이지입니다. <br>
+활용 가능한 기술 스택이나 업무 스킬들을 게임의 스킬처럼 수치화하여 표현했습니다.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<br><br>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+|인벤토리 (포트폴리오) 화면|
+|---|
+|이미지|
 
-## Learn More
+인벤토리 페이지입니다. <br>
+현재까지 제작한 토이 프로젝트들을 게임 가방의 아이템처럼 표현하였습니다 <br>
+클릭시 배포까지 완료된 프로젝트들은 '사용하기' 버튼을 통해 바로 배포 페이지로 이동 가능하며 <br>
+자세히 버튼을 통해 github 페이지로 이동이 가능합니다.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<br><br>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+|업적 (경력 & 자격) 화면|
+|---|
+|이미지|
+
+업적 페이지입니다. <br>
+업무 경력이나 자격사항을 표현한 페이지입니다.
