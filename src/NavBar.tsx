@@ -8,7 +8,7 @@ interface NavProps {
 }
 
 const NavBar = ({ page, setPage }:NavProps ) => {
-  console.log(page)
+
   return (
     <>
       <div className="nav-box">

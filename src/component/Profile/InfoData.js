@@ -2,7 +2,7 @@ export const InfoData =
   {
     name: '박찬하',
     photo: { charactor:'/img/profile/charactor_img.jpg', ident:'/img/profile/photo_ident.png', full:'/img/profile/photo_full.jpg', },
-    comment: { charactor: '테스트 ', ident: '사람 친화적인 개발자', full: '아직은 뉴비'},
+    comment: { charactor: '요식업, 영업을 거쳐 끊임없이 도전하는 주니어 개발자 ', ident: '사람과 소통에 능하고, 컴퓨터와 소통도 성장하는 중', full: '더 나은 미래를 위한 일을 할 때 빛이 나는 사람'},
     birth: '1996-12-16',
     phoneNum: '010-2463-0369',
     email: 'chanbyul5@naver.com',

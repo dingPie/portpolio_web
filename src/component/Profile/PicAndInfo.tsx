@@ -21,7 +21,7 @@ const PicAndInfo = () => {
             setPhotos('charactor')
             return
         }
-      }, 5000)
+      }, 7000)
 
       return () => {
         clearInterval(timeRef.current) // 위에 setInterval이 실행되고 삭제해줘야 중복 실행이 안된다.
@@ -50,9 +50,9 @@ const PicAndInfo = () => {
 
         </Picture>
 
-          {/* { photos === 'charactor' ? <p> {InfoData.comment.charactor} </p> : null}
+          { photos === 'charactor' ? <p> {InfoData.comment.charactor} </p> : null}
           { photos === 'ident' ? <p> {InfoData.comment.ident} </p> : null}
-          { photos === 'full' ? <p> {InfoData.comment.full} </p> : null} */}
+          { photos === 'full' ? <p> {InfoData.comment.full} </p> : null}
 
       </PicBox>
       
